@@ -14,11 +14,12 @@ The **Artifacts Tracker** is a web application designed to catalog and showcase 
 
 ### **Core Technologies**
 
-- **Frontend:** React, React-Router, Tailwind CSS, DaisyUI
+- **Frontend:** React, React-Router, Tailwind CSS, DaisyUI,  Firebase, Vite
 - **Backend:** Firebase Authentication, MongoDB, Express.js
 
 ### **Installed Packages**
 
+- **vite**
 - **tailwindcss**
 - **unhead**
 - **axios**
