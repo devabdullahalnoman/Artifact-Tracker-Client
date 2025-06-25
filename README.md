@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-The **Historical Artifacts Tracker** is a web application designed to catalog and showcase various historical artifacts, such as the Rosetta Stone and the Antikythera Mechanism. This platform allows users to explore existing artifacts, add new entries, interact with other submissions through likes, and track their own contributions. The system aims to provide an engaging, user-friendly experience with smooth navigation, responsive design, and authentication security.
+The **Artifacts Tracker** is a web application designed to catalog and showcase various historical artifacts, such as the Rosetta Stone and the Antikythera Mechanism. This platform allows users to explore existing artifacts, add new entries, interact with other submissions through likes, and track their own contributions. The system aims to provide an engaging, user-friendly experience with smooth navigation, responsive design, and authentication security.
 
 ### Live URL : https://artifact-tracker-22c55.web.app/
 
