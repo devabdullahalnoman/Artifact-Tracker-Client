@@ -1,3 +1,5 @@
+<img src='https://github.com/devabdullahalnoman/Artifact-Tracker-Client/blob/main/Screenshot%20from%202025-06-25%2011-05-54.png'></img>
+
 # Artifacts Tracker
 
 ## Project Overview
@@ -74,18 +76,20 @@ The **Historical Artifacts Tracker** is a web application designed to catalog an
 To run this project locally:
 
 1. **Clone the repository**
+
 ```bash
  git clone https://github.com/devabdullahalnoman/Artifact-Tracker-Client.git
  cd Artifact-Tracker-Client
 ```
 
-   
 2. **Install dependencies**
+
 ```bash
 npm install
 ```
 
 3. **Set up environment variables Create a .env.local file and add:**
+
 ```env
 VITE_apiKey=your_api_key
 VITE_authDomain=your_auth_domain
@@ -94,7 +98,7 @@ VITE_storageBucket=your_storage_bucket
 VITE_messagingSenderId=your_messaging_sender_id
 VITE_appId=your_app_id
 ```
-        
+
 4. **Start the development server**
 
 ```bash
