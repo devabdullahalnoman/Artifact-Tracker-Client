@@ -6,13 +6,13 @@ import Footer from "../shared/Footer";
 const RootLayout = () => {
   return (
     <div>
-      <div className="relative hidden md:block h-38 pt-7 bg-[#18181b]">
+      <div className="relative hidden md:block h-38 pt-8 bg-base-100">
         <div className="w-11/12 mx-auto">
           <div className="flex items-center justify-center">
             <img src="favicon.png" className="w-12" alt="" />
             <Link
               to="/"
-              className="text-3xl text-yellow-600 font-bold ms-2 hidden md:block"
+              className="text-3xl text-base-content font-bold ms-2 hidden md:block"
             >
               Artifact Tracker
             </Link>
