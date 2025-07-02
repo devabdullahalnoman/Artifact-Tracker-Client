@@ -55,7 +55,7 @@ const Navbar = () => {
   };
 
   const links = (
-    <div className="flex flex-col md:flex-row text-lg text-base-content gap-4 lg:gap-6">
+    <div className="flex flex-col md:flex-row text-base md:text-lg text-base-content gap-4 lg:gap-6">
       <li className="hover:text-xl hover:bg-accent hover:rounded">
         <Link to="/" onClick={() => setIsMenuOpen(false)}>
           Home
