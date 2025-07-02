@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Link } from "react-router";
 import { AuthContext } from "../contexts/authContext/AuthContext";
 import Swal from "sweetalert2";
@@ -7,6 +7,10 @@ import { toast, ToastContainer } from "react-toastify";
 const Navbar = () => {
   const { user, signOutUser } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
+
+  const menuRef = useRef(null);
+  const userMenuRef = useRef(null);
 
   const [theme, setTheme] = useState(
     () => localStorage.getItem("theme") || "ancientlight"
@@ -16,6 +20,20 @@ const Navbar = () => {
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+      if (userMenuRef.current && !userMenuRef.current.contains(e.target)) {
+        setIsUserMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSignOut = () => {
     signOutUser()
@@ -72,7 +90,7 @@ const Navbar = () => {
     <div className="lg:w-10/12 mx-auto bg-base-300 shadow-sm rounded-lg">
       <div className="navbar">
         <div className="navbar-start">
-          <div className="relative md:hidden">
+          <div className="relative md:hidden" ref={menuRef}>
             <button
               onClick={() => setIsMenuOpen((prev) => !prev)}
               className="btn btn-ghost"
@@ -163,33 +181,54 @@ const Navbar = () => {
 
           {user ? (
             <>
-              <div className="dropdown dropdown-end mr-2">
-                <div tabIndex={0} role="button" className="m-1">
-                  <div className="avatar">
-                    <div className="w-13 rounded-full hover:cursor-pointer">
-                      <img src={user.photoURL} />
-                    </div>
-                  </div>
-                </div>
-                <ul
-                  tabIndex={0}
-                  className="dropdown-content menu bg-base-300 text-base-content rounded-box z-1 w-52 p-2 shadow-sm"
+              <div className="relative mr-2" ref={userMenuRef}>
+                <button
+                  onClick={() => setIsUserMenuOpen((prev) => !prev)}
+                  className="avatar"
                 >
-                  <li>
-                    <p>{user.displayName}</p>
-                  </li>
-                  <li>
-                    <Link to="/myArtifacts">My Artifacts</Link>
-                  </li>
-                  <li>
-                    <Link to="/likedArtifacts">My Liked Artifacts</Link>
-                  </li>
-                  <li>
-                    <button onClick={handleSignOut} className="btn">
-                      Sign Out
-                    </button>
-                  </li>
-                </ul>
+                  <div className="w-13 rounded-full hover:cursor-pointer">
+                    <img src={user.photoURL} alt="User avatar" />
+                  </div>
+                </button>
+
+                {isUserMenuOpen && (
+                  <ul className="absolute right-0 mt-2 w-52 bg-base-300 text-base-content rounded-box shadow z-50 p-2 space-y-2">
+                    <li>
+                      <p className="px-4 py-2 font-semibold">
+                        {user.displayName}
+                      </p>
+                    </li>
+                    <li>
+                      <Link
+                        to="/myArtifacts"
+                        onClick={() => setIsUserMenuOpen(false)}
+                        className="block px-4 py-2 rounded hover:bg-accent hover:text-white transition"
+                      >
+                        My Artifacts
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        to="/likedArtifacts"
+                        onClick={() => setIsUserMenuOpen(false)}
+                        className="block px-4 py-2 rounded hover:bg-accent hover:text-white transition"
+                      >
+                        My Liked Artifacts
+                      </Link>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setIsUserMenuOpen(false);
+                          handleSignOut();
+                        }}
+                        className="block w-full text-left px-4 py-2 rounded hover:bg-error hover:text-white transition"
+                      >
+                        Sign Out
+                      </button>
+                    </li>
+                  </ul>
+                )}
               </div>
             </>
           ) : (
