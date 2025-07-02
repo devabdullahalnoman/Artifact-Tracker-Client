@@ -11,7 +11,7 @@ const MyArtifacts = () => {
   const { myArtifactsPromise } = useMyArtifactsApi();
 
   return (
-    <div className="bg-base-300 py-14">
+    <div className="bg-base-200 py-14 h-screen">
       <h1 className="text-center text-4xl font-bold">My Artifacts List</h1>
       <Suspense fallback={<LoadingSpinner></LoadingSpinner>}>
         <MyArtifactsList

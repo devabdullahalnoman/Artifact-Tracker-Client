@@ -4,32 +4,31 @@
   themes: ancientlight, ancientdark;
 }
 
-
 @plugin "daisyui/theme" {
   name: "ancientlight";
   color-scheme: light;
 
-  --color-primary: #7C5E10;
-  --color-primary-content: #FAF4E6;
+  --color-primary: #7c5e10;
+  --color-primary-content: #faf4e6;
 
-  --color-secondary: #A1866F;
-  --color-secondary-content: #FAF4E6;
+  --color-secondary: #a1866f;
+  --color-secondary-content: #faf4e6;
 
-  --color-accent: #BFAE8F;
-  --color-accent-content: #1C1A16;
+  --color-accent: #bfae8f;
+  --color-accent-content: #1c1a16;
 
-  --color-neutral: #A89F91;
-  --color-neutral-content: #1C1A16;
+  --color-neutral: #a89f91;
+  --color-neutral-content: #1c1a16;
 
-  --color-base-100: #FAF4E6;
-  --color-base-200: #EDE3D1;
-  --color-base-300: #D6C7B0;
-  --color-base-content: #3B2F2F;
+  --color-base-100: #d6c7b0;
+  --color-base-200: #ede3d1;
+  --color-base-300: #faf4e6;
+  --color-base-content: #3b2f2f;
 
-  --color-info: #7FB3D5;
-  --color-success: #8FBC8F;
-  --color-warning: #D4A017;
-  --color-error: #C14444;
+  --color-info: #7fb3d5;
+  --color-success: #8fbc8f;
+  --color-warning: #d4a017;
+  --color-error: #c14444;
 
   /* border radius */
   --radius-selector: 1rem;
@@ -52,27 +51,27 @@
   name: "ancientdark";
   color-scheme: dark;
 
-  --color-primary: #C2B280;
-  --color-primary-content: #1C1A16;
+  --color-primary: #c2b280;
+  --color-primary-content: #1c1a16;
 
-  --color-secondary: #8B6F47;
-  --color-secondary-content: #1C1A16;
+  --color-secondary: #8b6f47;
+  --color-secondary-content: #1c1a16;
 
-  --color-accent: #A68A64;
-  --color-accent-content: #FAF4E6;
+  --color-accent: #a68a64;
+  --color-accent-content: #faf4e6;
 
-  --color-neutral: #3A342D;
-  --color-neutral-content: #EDE3D1;
+  --color-neutral: #3a342d;
+  --color-neutral-content: #ede3d1;
 
-  --color-base-100: #1C1A16;
-  --color-base-200: #2A2722;
-  --color-base-300: #3A342D;
-  --color-base-content: #EDE3D1;
+  --color-base-100: #1c1a16;
+  --color-base-200: #2a2722;
+  --color-base-300: #3a342d;
+  --color-base-content: #ede3d1;
 
-  --color-info: #5DADE2;
-  --color-success: #6BBF59;
-  --color-warning: #E1B12C;
-  --color-error: #E74C3C;
+  --color-info: #5dade2;
+  --color-success: #6bbf59;
+  --color-warning: #e1b12c;
+  --color-error: #e74c3c;
 
   /* border radius */
   --radius-selector: 1rem;

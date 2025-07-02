@@ -8,6 +8,8 @@ const MyArtifactsList = ({ myArtifactsPromise }) => {
   const [artifacts, setArtifacts] = useState([]);
   const myArtifactsData = use(myArtifactsPromise);
 
+  console.log(myArtifactsPromise);
+
   useEffect(() => {
     setArtifacts(myArtifactsData);
   }, []);

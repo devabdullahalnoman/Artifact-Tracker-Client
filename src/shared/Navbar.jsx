@@ -115,6 +115,58 @@ const Navbar = () => {
             {isMenuOpen && (
               <ul className="absolute flex flex-col gap-5 right-0 left-0 mt-2 w-52 bg-base-300 rounded-box shadow z-50 p-5 space-y-2">
                 {links}
+                <li>
+                  <div>
+                    <label className="flex cursor-pointer gap-2 items-center justify-between">
+                      <p>Theme</p>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <circle cx="12" cy="12" r="5" />
+                        <path d="M12 1v2M12 21v2M4.2 4.2l1.4 1.4M18.4 18.4l1.4 1.4M1 12h2M21 12h2M4.2 19.8l1.4-1.4M18.4 5.6l1.4-1.4" />
+                      </svg>
+
+                      <input
+                        type="checkbox"
+                        className="toggle theme-controller text-base-content"
+                        onChange={(e) => {
+                          const newTheme = e.target.checked
+                            ? "ancientdark"
+                            : "ancientlight";
+                          document.documentElement.setAttribute(
+                            "data-theme",
+                            newTheme
+                          );
+                          localStorage.setItem("theme", newTheme);
+                          setTheme(newTheme);
+                        }}
+                        checked={theme === "ancientdark"}
+                      />
+
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                      </svg>
+                    </label>
+                  </div>
+                </li>
               </ul>
             )}
           </div>
@@ -122,7 +174,7 @@ const Navbar = () => {
             <img src="favicon.png" className="w-12" alt="" />
             <Link
               to="/"
-              className="text-xl text-base-content font-bold ms-2 hidden md:block"
+              className="text-xl text-base-content font-bold ms-2 hidden sm:block"
             >
               Artifact Tracker
             </Link>
@@ -132,7 +184,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-end gap-3">
-          <div>
+          <div className="hidden sm:block">
             <label className="flex cursor-pointer gap-2 items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -236,7 +288,7 @@ const Navbar = () => {
               <Link to="/signup" className="btn">
                 Sign Up
               </Link>
-              <Link to="/signin" className="btn">
+              <Link to="/signin" className="btn mr-2">
                 Sign In
               </Link>
             </>

@@ -38,25 +38,27 @@ const MyArtifactsRows = ({ artifact, artifacts, setArtifacts }) => {
   };
 
   return (
-    <tr className="text-center">
+    <tr>
       <td>
-        <div className="flex items-center gap-3">
-          <div className="avatar">
-            <div className="mask mask-squircle h-12 w-12">
-              <img src={artifact_image} alt="Avatar Tailwind CSS Component" />
+        <div className="md:w-1/3 mx-auto">
+          <div className="flex items-center justify-start w-fit gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle h-12 w-12">
+                <img src={artifact_image} alt="Avatar Tailwind CSS Component" />
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="font-bold">{artifact_name}</div>
+            <div>
+              <div className="font-bold">{artifact_name}</div>
+            </div>
           </div>
         </div>
       </td>
-      <td className="hidden md:block">
+      <td className="hidden md:block text-center">
         {discovered_by}
         <br />
         <span className="badge badge-ghost badge-sm">{discovered_at}</span>
       </td>
-      <td>
+      <td className="text-center">
         <Link to={`/artifact/${_id}`}>
           <button className="btn btn-ghost mb-1">Details</button>
         </Link>

@@ -11,27 +11,29 @@ const LikedArtifactsRows = ({ artifact }) => {
   } = artifact;
 
   return (
-    <tr className="text-center">
+    <tr>
       <td>
-        <div className="flex items-center gap-3">
-          <div className="avatar">
-            <div className="mask mask-squircle h-12 w-12">
-              <img src={artifactImage} alt="Avatar Tailwind CSS Component" />
+        <div className="md:w-1/3 mx-auto">
+          <div className="flex items-center justify-start gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle h-12 w-12">
+                <img src={artifactImage} alt="Avatar Tailwind CSS Component" />
+              </div>
             </div>
-          </div>
-          <div>
-            <div className="font-bold">{artifactName}</div>
+            <div>
+              <div className="font-bold">{artifactName}</div>
+            </div>
           </div>
         </div>
       </td>
-      <td className="hidden md:block">
+      <td className="hidden md:block text-center">
         {artifactDiscoverer}
         <br />
         <span className="badge badge-ghost badge-sm">
           {artifactDiscoveryPeriod}
         </span>
       </td>
-      <th>
+      <th className="text-center">
         <Link to={`/artifact/${artifactId}`}>
           <button className="btn btn-ghost">Details</button>
         </Link>
