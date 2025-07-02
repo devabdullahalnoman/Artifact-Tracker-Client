@@ -66,21 +66,21 @@ const UpdateArtifact = () => {
   };
 
   return (
-    <div className="pt-10">
+    <div className="bg-base-200 py-14">
       <div className="w-11/12 mx-auto">
         <Head>
           <title>Update Artifact</title>
         </Head>
-        <h1 className="text-4xl font-bold text-center my-8">Update Artifact</h1>
+        <h1 className="text-4xl font-bold text-center py-5">Update Artifact</h1>
         <form onSubmit={handleUpdateArtifact}>
-          <fieldset className="bg-base-200 border-base-300 rounded-box border md:flex gap-6 p-4 mb-4">
+          <fieldset className="bg-base-300 border-base-100 rounded-box border md:flex gap-6 p-4 mb-4">
             <legend className="fieldset-legend">Adder Information</legend>
 
             <div className="w-full">
               <label className="label">Adder Name</label>
               <input
                 type="text"
-                className="input w-full"
+                className="input w-full bg-base-200 text-lg"
                 name="adder_name"
                 value={artifact.adder_name}
               />
@@ -90,14 +90,14 @@ const UpdateArtifact = () => {
               <label className="label">Adder Email</label>
               <input
                 type="email"
-                className="input w-full"
+                className="input w-full bg-base-200 text-lg"
                 name="adder_email"
                 value={artifact.adder_email}
               />
             </div>
           </fieldset>
 
-          <fieldset className="bg-base-200 border-base-300 rounded-box border p-4 mb-4">
+          <fieldset className="bg-base-300 border-base-100 rounded-box border p-4 mb-4">
             <legend className="fieldset-legend">Basic Information</legend>
 
             <div className="md:flex gap-6 mb-4">
@@ -106,7 +106,7 @@ const UpdateArtifact = () => {
                 <input
                   type="text"
                   name="artifact_name"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   defaultValue={artifact.artifact_name}
                 />
               </div>
@@ -116,7 +116,7 @@ const UpdateArtifact = () => {
                 <input
                   type="url"
                   name="artifact_image"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   defaultValue={artifact.artifact_image}
                 />
               </div>
@@ -128,7 +128,7 @@ const UpdateArtifact = () => {
                 <br />
                 <select
                   defaultValue={artifact.artifact_type}
-                  className="select w-full"
+                  className="select w-full bg-base-200 text-lg"
                   name="artifact_type"
                 >
                   <option disabled={true}>Pick an artifact type</option>
@@ -146,7 +146,7 @@ const UpdateArtifact = () => {
                 <label className="label">Created At</label>
                 <input
                   type="text"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   name="created_at"
                   defaultValue={artifact.created_at}
                 />
@@ -158,7 +158,7 @@ const UpdateArtifact = () => {
                 <label className="label">Historical Context</label>
                 <input
                   type="text"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   name="historical_context"
                   defaultValue={artifact.historical_context}
                 />
@@ -167,14 +167,14 @@ const UpdateArtifact = () => {
                 <label className="label">Present Location</label>
                 <input
                   type="text"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   name="present_location"
                   defaultValue={artifact.present_location}
                 />
               </div>
             </div>
           </fieldset>
-          <fieldset className="bg-base-200 border-base-300 rounded-box border p-4 mb-4">
+          <fieldset className="bg-base-300 border-base-100 rounded-box border p-4 mb-4">
             <legend className="fieldset-legend">Discovery</legend>
 
             <div className="md:flex gap-6 mb-4">
@@ -183,7 +183,7 @@ const UpdateArtifact = () => {
                 <input
                   type="text"
                   name="discovered_by"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   defaultValue={artifact.discovered_by}
                 />
               </div>
@@ -193,7 +193,7 @@ const UpdateArtifact = () => {
                 <input
                   type="text"
                   name="discovered_at"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   defaultValue={artifact.discovered_at}
                 />
               </div>
@@ -201,14 +201,14 @@ const UpdateArtifact = () => {
             <fieldset className="">
               <legend className="label">Short Description</legend>
               <textarea
-                className="textarea h-24"
+                className="textarea h-24 bg-base-200 text-lg w-full"
                 name="short_description"
                 defaultValue={artifact.short_description}
               ></textarea>
             </fieldset>
           </fieldset>
           <button
-            className="btn mb-8 p-7 w-full rounded-lg text-2xl"
+            className="btn mb-8 p-7 w-full rounded-lg text-2xl bg-base-100 hover:bg-accent hover:text-white"
             type="submit"
           >
             Update Artifact

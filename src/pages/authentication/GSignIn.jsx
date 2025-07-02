@@ -40,12 +40,12 @@ const GSignIn = () => {
     <div className="flex flex-col">
       <button
         onClick={handleGoogleSignIn}
-        className="btn bg-white text-black border-[#e5e5e5]"
+        className="btn bg-white text-black hover:bg-accent border-[#e5e5e5] text-lg"
       >
         <svg
           aria-label="Google logo"
-          width="16"
-          height="16"
+          width="25"
+          height="25"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >

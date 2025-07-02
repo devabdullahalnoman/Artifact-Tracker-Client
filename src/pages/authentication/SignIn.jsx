@@ -48,34 +48,37 @@ const SignIn = () => {
     <motion.div
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
       <Head>
         <title>Sign In</title>
       </Head>
-      <div className="hero bg-base-200 pt-10 md:pt-0 min-h-screen">
+      <div className="hero bg-base-200 min-h-screen">
         <div className="hero-content md:w-xl">
-          <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
+          <div className="card bg-base-300 w-full shrink-0 shadow-2xl">
             <div className="card-body">
               <h1 className="text-3xl font-bold p-4 text-center">Sign In</h1>
               <GSignIn></GSignIn>
               <form onSubmit={handleSignIn} className="fieldset">
-                <label className="label">Email</label>
+                <label className="label text-lg">Email</label>
                 <input
                   type="email"
                   name="email"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Email"
                 />
                 <label className="label">Password</label>
                 <input
                   type="password"
                   name="password"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Password"
                 />
-                <button type="submit" className="btn btn-neutral mt-4">
+                <button
+                  type="submit"
+                  className="btn bg-base-100 text-lg hover:bg-accent hover:text-white mt-4"
+                >
                   Sign In
                 </button>
               </form>

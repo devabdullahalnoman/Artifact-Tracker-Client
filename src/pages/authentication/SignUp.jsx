@@ -66,7 +66,7 @@ const SignUp = () => {
     <motion.div
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
-      transition={{ duration: 2 }}
+      transition={{ duration: 0.3 }}
       viewport={{ once: true }}
     >
       <Head>
@@ -74,41 +74,44 @@ const SignUp = () => {
       </Head>
       <div className="hero bg-base-200 pt-10 md:pt-0 min-h-screen">
         <div className="hero-content w-xl">
-          <div className="card bg-base-100 w-full shrink-0 shadow-2xl">
+          <div className="card bg-base-300 w-full shrink-0 shadow-2xl">
             <div className="card-body">
               <h1 className="text-3xl font-bold p-4 text-center">Sign Up</h1>
               <GSignIn></GSignIn>
               <form onSubmit={handleSignUp} className="fieldset">
-                <label className="label">Name</label>
+                <label className="label text-lg">Name</label>
                 <input
                   type="text"
                   name="name"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Name"
                 />
-                <label className="label">Email</label>
+                <label className="label text-lg">Email</label>
                 <input
                   type="email"
                   name="email"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Email"
                 />
-                <label className="label">Password</label>
+                <label className="label text-lg">Password</label>
                 <input
                   type="password"
                   name="password"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Password"
                 />
-                <label className="label">Photo URL</label>
+                <label className="label text-lg">Photo URL</label>
                 <input
                   type="url"
                   name="photoUrl"
-                  className="input w-full"
+                  className="input w-full bg-base-200 text-lg"
                   placeholder="Photo URL"
                 />
 
-                <button type="submit" className="btn btn-neutral mt-4">
+                <button
+                  type="submit"
+                  className="btn bg-base-100 text-lg hover:bg-accent hover:text-white mt-4"
+                >
                   Sign Up
                 </button>
               </form>
