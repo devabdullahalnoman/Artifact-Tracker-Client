@@ -13,6 +13,7 @@ import UpdateArtifact from "../pages/updateArtifact/UpdateArtifact";
 import LikedArtifacts from "../pages/likedArtifacts/LikedArtifacts";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import ContactUs from "../pages/ContactUs/ContactUs";
+import AboutUs from "../layouts/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
       {
         path: "/signin",
         element: <SignIn></SignIn>,
+      },
+      {
+        path: '/aboutUs',
+        element: <AboutUs></AboutUs>
       },
       {
         path: "/contactUs",

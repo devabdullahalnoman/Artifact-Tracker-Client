@@ -25,7 +25,7 @@ const LikedArtifactsList = ({ myLikedArtifactsPromise, user }) => {
   }
 
   return (
-    <div className="w-11/12 mx-auto my-8">
+    <div className="w-10/12 mx-auto my-8">
       <Head>
         <title>My Liked Artifacts</title>
       </Head>

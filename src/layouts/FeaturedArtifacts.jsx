@@ -23,29 +23,17 @@ const FeaturedArtifacts = () => {
   }
 
   return (
-    <div className="rounded-2xl">
+    <div className="py-20 bg-base-300">
       <hr className="max-w-15 mx-auto text-yellow-600 border-2 rounded-2xl" />
-      <div className="w-11/12 mx-auto">
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-4xl text-center mt-6 mb-8 font-bold"
-        >
+      <div className="px-3 md:w-10/12 mx-auto">
+        <h1 className="text-4xl text-center my-8 font-bold">
           Featured Artifacts
-        </motion.h1>
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6"
-        >
+        </h1>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredArtifacts.map((artifact) => (
             <ArtifactCard key={artifact._id} artifact={artifact}></ArtifactCard>
           ))}
-        </motion.div>
+        </div>
         <motion.div
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -54,7 +42,7 @@ const FeaturedArtifacts = () => {
           className="flex justify-center my-3"
         >
           <Link to="/allArtifacts">
-            <button className="btn btn-xl btn-outline mt-4 rounded-xl">
+            <button className="btn btn-xl bg-base-100 hover:bg-accent mt-4 rounded-2xl">
               See All
             </button>
           </Link>

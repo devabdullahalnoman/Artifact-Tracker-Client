@@ -42,7 +42,7 @@ const AllArtifacts = () => {
   }
 
   return (
-    <div className="bg-base-200 py-14">
+    <div className="bg-base-200 py-6 md:py-12 lg:py-14">
       <div className="max-w-10/12 mx-auto">
         <Head>
           <title>All Artifact</title>
@@ -159,7 +159,7 @@ const AllArtifacts = () => {
               </button>
             </div>
           ) : (
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
               {allArtifacts.map((artifact) => (
                 <ArtifactCard key={artifact._id} artifact={artifact} />
               ))}

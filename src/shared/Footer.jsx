@@ -4,18 +4,22 @@ import { Link } from "react-router";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer footer-horizontal text-yellow-100 footer-center bg-[#18181b] p-10">
+      <footer className="footer footer-horizontal text-base-content footer-center bg-base-100 p-10">
         <aside>
-          <p className="font-bold">
-            <div className="flex items-center">
+          <div>
+            <div className="flex items-center justify-center my-8">
               <img src="favicon.png" className="w-14" alt="" />
-              <Link to="/" className="text-3xl text-yellow-600 font-bold ms-2">
+              <Link
+                to="/"
+                className="text-3xl text-base-content font-bold md:ms-2"
+              >
                 Artifact Tracker
               </Link>
             </div>
-            <br />
-            The best platform to track Artifacts
-          </p>
+            <p className="font-bold text-lg text-base-content my-2">
+              The best platform to track Artifacts
+            </p>
+          </div>
           <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
         </aside>
         <nav>
@@ -23,8 +27,8 @@ const Footer = () => {
             <a href="https://x.com/" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="34"
+                height="34"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >
@@ -34,8 +38,8 @@ const Footer = () => {
             <a href="https://www.youtube.com/" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="34"
+                height="34"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >
@@ -45,8 +49,8 @@ const Footer = () => {
             <a href="https://www.facebook.com/" target="_blank">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
+                width="34"
+                height="34"
                 viewBox="0 0 24 24"
                 className="fill-current"
               >

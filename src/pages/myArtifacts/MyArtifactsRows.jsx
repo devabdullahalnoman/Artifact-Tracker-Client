@@ -56,7 +56,7 @@ const MyArtifactsRows = ({ artifact, artifacts, setArtifacts }) => {
       <td className="hidden md:block text-center">
         {discovered_by}
         <br />
-        <span className="badge badge-ghost badge-sm">{discovered_at}</span>
+        <span className="badge bg-base-300 badge-sm">{discovered_at}</span>
       </td>
       <td className="text-center">
         <Link to={`/artifact/${_id}`}>

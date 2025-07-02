@@ -6,7 +6,7 @@ import { CgWebsite } from "react-icons/cg";
 
 const ContactUs = () => {
   return (
-    <div className="bg-base-200 py-14">
+    <div className="bg-base-200 py-6 md:py-12 lg:py-14">
       <h1 className="text-4xl font-bold text-center pt-5 mb-10">
         Our Contact details
       </h1>

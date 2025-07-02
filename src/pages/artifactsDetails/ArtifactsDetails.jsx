@@ -109,94 +109,96 @@ const ArtifactsDetails = () => {
   }
 
   return (
-    <div className="py-20 w-11/12 mx-auto grid md:grid-cols-12">
-      <Head>
-        <title>{artifact.artifact_name}</title>
-      </Head>
-      <div className="col-span-6">
-        <h1 className="text-4xl text-center font-semibold mb-10">
-          {artifact.artifact_name}
-        </h1>
-        <div className="flex justify-center mb-5">
-          <img
-            src={artifact.artifact_image}
-            alt="Artifact Image"
-            className="md:max-w-md"
-          />
+    <div className="py-7 md:py-13 lg:py-15 bg-base-200">
+      <div className="md:w-10/12 mx-auto grid md:grid-cols-12">
+        <Head>
+          <title>{artifact.artifact_name}</title>
+        </Head>
+        <div className="md:col-span-6">
+          <h1 className="text-4xl text-center font-semibold mb-10">
+            {artifact.artifact_name}
+          </h1>
+          <div className="flex justify-center mb-5">
+            <img
+              src={artifact.artifact_image}
+              alt="Artifact Image"
+              className="lg:max-w-md rounded-2xl"
+            />
+          </div>
         </div>
-      </div>
-      <div className="divider divider-horizontal"></div>
-      <div className="col-span-5">
-        <div className="flex justify-center md:justify-end">
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
-            <legend className="legend text-2xl font-extrabold">Like</legend>
-            <div className="my-3 flex items-center gap-5 justify">
-              <p className="text-lg font-bold mb-2">
-                Likes: {artifact.likes_count}
+        <div className="divider divider-horizontal hidden md:flex"></div>
+        <div className="max-w-11/12 mx-auto md:max-w-full md:col-span-5">
+          <div className="flex justify-center md:justify-end">
+            <fieldset className="fieldset bg-base-300 border-base-300 rounded-box w-xs border p-4">
+              <legend className="legend text-2xl font-extrabold">Like</legend>
+              <div className="my-3 flex items-center gap-5 justify">
+                <p className="text-lg font-bold mb-2">
+                  Likes: {artifact.likes_count}
+                </p>
+                {liked ? (
+                  <button
+                    onClick={handleDislike}
+                    className="btn btn-outline text-2xl p-7 rounded-2xl"
+                  >
+                    <AiOutlineDislike />
+                    Dislike
+                  </button>
+                ) : (
+                  <button
+                    onClick={handleLike}
+                    className="btn btn-outline text-2xl p-7 rounded-2xl"
+                  >
+                    <AiOutlineLike />
+                    like
+                  </button>
+                )}
+              </div>
+            </fieldset>
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
+              <legend className="legend text-2xl font-extrabold">
+                Basic Information
+              </legend>
+              <p className="text-lg font-bold">
+                Artifact type: {artifact.artifact_type}
               </p>
-              {liked ? (
-                <button
-                  onClick={handleDislike}
-                  className="btn btn-outline text-2xl p-7"
-                >
-                  <AiOutlineDislike />
-                  Dislike
-                </button>
-              ) : (
-                <button
-                  onClick={handleLike}
-                  className="btn btn-outline text-2xl p-7"
-                >
-                  <AiOutlineLike />
-                  like
-                </button>
-              )}
-            </div>
-          </fieldset>
+              <p className="text-lg font-bold">
+                Creation Period: {artifact.created_at}
+              </p>
+              <p className="text-lg font-bold">
+                Historical Context: {artifact.historical_context}
+              </p>
+            </fieldset>
+
+            <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
+              <legend className="legend text-2xl font-extrabold">
+                Discovery
+              </legend>
+              <p className="text-lg font-bold">
+                Discovery Period: {artifact.discovered_at}
+              </p>
+              <p className="text-lg font-bold">
+                Discoverer: {artifact.discovered_by}
+              </p>
+              <p className="text-lg font-bold">
+                Present Location: {artifact.present_location}
+              </p>
+            </fieldset>
+
+            <fieldset className="fieldset bg-base-300 border-base-300 rounded-box border p-4">
+              <legend className="legend text-2xl font-extrabold">
+                Description
+              </legend>
+              <p className="text-lg font-bold border rounded-2xl p-8 mx-auto">
+                {artifact.short_description}
+              </p>
+            </fieldset>
+          </div>
         </div>
-
-        <div className="flex flex-col gap-5">
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
-            <legend className="legend text-2xl font-extrabold">
-              Basic Information
-            </legend>
-            <p className="text-lg font-bold">
-              Artifact type: {artifact.artifact_type}
-            </p>
-            <p className="text-lg font-bold">
-              Creation Period: {artifact.created_at}
-            </p>
-            <p className="text-lg font-bold">
-              Historical Context: {artifact.historical_context}
-            </p>
-          </fieldset>
-
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
-            <legend className="legend text-2xl font-extrabold">
-              Discovery
-            </legend>
-            <p className="text-lg font-bold">
-              Discovery Period: {artifact.discovered_at}
-            </p>
-            <p className="text-lg font-bold">
-              Discoverer: {artifact.discovered_by}
-            </p>
-            <p className="text-lg font-bold">
-              Present Location: {artifact.present_location}
-            </p>
-          </fieldset>
-
-          <fieldset className="fieldset bg-base-200 border-base-300 rounded-box border p-4">
-            <legend className="legend text-2xl font-extrabold">
-              Description
-            </legend>
-            <p className="text-lg font-bold border p-8 mx-auto">
-              {artifact.short_description}
-            </p>
-          </fieldset>
-        </div>
+        <ToastContainer></ToastContainer>
       </div>
-      <ToastContainer></ToastContainer>
     </div>
   );
 };

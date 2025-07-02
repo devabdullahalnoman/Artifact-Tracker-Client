@@ -5,11 +5,14 @@ import { Head } from "@unhead/react";
 import OurHistory from "../../layouts/OurHistory";
 import AboutUs from "../../layouts/AboutUs";
 import { motion } from "motion/react";
+import Categories from "../../layouts/Categories";
+import Blogs from "../../layouts/Blogs";
+import NewsLetter from "../../layouts/NewsLetter";
 
 const Home = () => {
   return (
     <div>
-      <div className="pb-10">
+      <div className="bg-base-200">
         <Head>
           <title>Home - Artifact Tracker</title>
           <meta name="description" content="Artifact Tracker Home" />
@@ -19,7 +22,6 @@ const Home = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 3 }}
           viewport={{ once: true }}
-          className="mb-10 pt-1 md:pt-0"
         >
           <Banner></Banner>
         </motion.div>
@@ -28,7 +30,14 @@ const Home = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 3 }}
           viewport={{ once: true }}
-          className="bg-base-300 py-15 md:w-11/12 mx-auto rounded-2xl"
+        >
+          <Categories></Categories>
+        </motion.div>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 3 }}
+          viewport={{ once: true }}
         >
           <FeaturedArtifacts></FeaturedArtifacts>
         </motion.div>
@@ -37,7 +46,14 @@ const Home = () => {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 3 }}
           viewport={{ once: true }}
-          className="md:w-11/12 mx-auto"
+        >
+          <Blogs></Blogs>
+        </motion.div>
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 3 }}
+          viewport={{ once: true }}
         >
           <OurHistory></OurHistory>
         </motion.div>
@@ -47,7 +63,7 @@ const Home = () => {
           transition={{ duration: 3 }}
           viewport={{ once: true }}
         >
-          <AboutUs></AboutUs>
+          <NewsLetter></NewsLetter>
         </motion.div>
       </div>
     </div>

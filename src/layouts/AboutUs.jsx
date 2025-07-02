@@ -1,88 +1,62 @@
-import React from "react";
-import { motion } from "motion/react";
+import { Link } from "react-router";
 
 const AboutUs = () => {
   return (
-    <div className="bg-base-300 px-5 py-14 pb-18 rounded-2xl">
-      <hr className="max-w-15 mx-auto text-yellow-600 border-2 rounded-2xl" />
-      <div className=" mx-auto w-11/12">
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-4xl text-center font-bold my-8"
-        >
-          Who We Are
-        </motion.h1>
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-xl mb-3"
-        >
-          At Historical Artifacts Tracker, we are passionate about preserving
-          and sharing history. Our platform is designed for historians,
-          enthusiasts, and curious minds alike—providing a space where users can
-          explore, contribute, and appreciate the world's most fascinating
-          artifacts.
-        </motion.p>
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-2xl font-semibold mb-3"
-        >
-          Our Mission
-        </motion.h1>
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-xl mb-3"
-        >
-          We aim to create an interactive and user-friendly experience that
-          allows people to discover, track, and engage with historical
-          treasures. By bridging the gap between the past and the present, we
-          empower users to learn, connect, and contribute to the legacy of human
-          civilization.
-        </motion.p>
-        <motion.h1
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-2xl font-semibold mb-3"
-        >
-          Join Us in Preserving History
-        </motion.h1>
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-xl"
-        >
-          Whether you’re a researcher, a history buff, or simply curious about
-          the past, our platform offers a place to explore and celebrate human
-          achievements. Be part of the journey as we uncover the stories behind
-          the artifacts that shaped our world.
-        </motion.p>
-        <motion.p
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-          className="text-xl"
-        >
-          Be part of the journey as we uncover the stories behind the artifacts
-          that shaped our world," you could phrase it more engagingly: "Join our
-          vibrant community in exploring and preserving history. Your
-          discoveries help keep our shared heritage alive!"
-        </motion.p>
+    <div className="bg-base-200 py-14 px-4">
+      <div className="md:max-w-10/12 mx-auto text-center">
+        <h1 className="text-5xl font-bold mb-14">About Us</h1>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold mb-4">Who We Are</h2>
+          <p className="text-lg leading-relaxed text-base-content">
+            At{" "}
+            <span className="font-semibold">Historical Artifacts Tracker</span>,
+            we are more than just a digital archive — we are a passionate
+            community of historians, researchers, and curious minds dedicated to
+            preserving the legacy of human civilization. Our platform is a
+            living museum, where every artifact tells a story and every user
+            becomes a storyteller. Whether you're a scholar, a student, or
+            simply someone who marvels at the past, you’ll find a home here.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+          <p className="text-lg leading-relaxed text-base-content">
+            Our mission is to bridge the gap between the ancient and the modern
+            by creating an interactive, user-friendly space where history comes
+            alive. We believe that artifacts are more than objects — they are
+            echoes of human ingenuity, resilience, and culture. Through our
+            platform, users can discover rare relics, track their historical
+            significance, and contribute their own findings to a growing global
+            archive. We aim to democratize access to history and make it
+            engaging, accessible, and collaborative.
+          </p>
+        </section>
+
+        <section className="mb-12">
+          <h2 className="text-3xl font-semibold mb-4">
+            Join Us in Preserving History
+          </h2>
+          <p className="text-lg leading-relaxed text-base-content">
+            Whether you're a seasoned archaeologist or a weekend history
+            enthusiast, your voice matters. Join our vibrant community in
+            exploring and preserving history. Your discoveries help keep our
+            shared heritage alive! From uploading new artifacts to engaging in
+            discussions about ancient civilizations, every contribution adds a
+            new thread to the rich tapestry of our collective past.
+          </p>
+        </section>
+
+        <div className="mt-10">
+          <p className="text-xl font-medium text-base-content">
+            Be part of the journey as we uncover the stories behind the
+            artifacts that shaped our world.
+          </p>
+          <button className="btn btn-primary mt-6 text-lg">
+            <Link to="/allArtifacts">Start Exploring</Link>
+          </button>
+        </div>
       </div>
     </div>
   );

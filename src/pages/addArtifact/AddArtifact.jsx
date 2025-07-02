@@ -43,8 +43,8 @@ const AddArtifact = () => {
   };
 
   return (
-    <div className="bg-base-200 py-14">
-      <div className="w-11/12 mx-auto">
+    <div className="bg-base-200 py-6 md:py-12 lg:py-14">
+      <div className="w-10/12 mx-auto">
         <Head>
           <title>Add Artifact</title>
         </Head>

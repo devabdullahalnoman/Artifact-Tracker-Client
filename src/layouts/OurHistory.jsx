@@ -4,9 +4,9 @@ import OurHistoryPhoto from "./OurHistoryPhoto";
 
 const OurHistory = () => {
   return (
-    <div className="pt-15 pb-18">
+    <div className="py-20 bg-base-200">
       <hr className="max-w-15 mx-auto text-yellow-600 border-2 rounded-2xl" />
-      <div className="w-11/12 mx-auto">
+      <div className="px-3 md:max-w-10/12 mx-auto">
         <motion.h1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

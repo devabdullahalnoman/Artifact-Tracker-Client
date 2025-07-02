@@ -29,7 +29,7 @@ const LikedArtifactsRows = ({ artifact }) => {
       <td className="hidden md:block text-center">
         {artifactDiscoverer}
         <br />
-        <span className="badge badge-ghost badge-sm">
+        <span className="badge bg-base-300 badge-sm">
           {artifactDiscoveryPeriod}
         </span>
       </td>

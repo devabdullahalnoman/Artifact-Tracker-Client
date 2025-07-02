@@ -11,7 +11,7 @@ const OurHistoryPhoto = () => {
     >
       <img
         src="https://i.ibb.co/jkwTDxZP/about-us.jpg"
-        className="w-full max-h-[500px]"
+        className="w-full max-h-[500px] rounded-2xl"
         alt=""
       />
     </motion.div>

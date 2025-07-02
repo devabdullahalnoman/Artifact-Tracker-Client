@@ -66,7 +66,7 @@ const UpdateArtifact = () => {
   };
 
   return (
-    <div className="bg-base-200 py-14">
+    <div className="bg-base-200 py-6 md:py-12 lg:py-14">
       <div className="w-11/12 mx-auto">
         <Head>
           <title>Update Artifact</title>

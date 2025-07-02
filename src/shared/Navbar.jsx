@@ -285,10 +285,16 @@ const Navbar = () => {
             </>
           ) : (
             <>
-              <Link to="/signup" className="btn bg-base-100 hover:bg-accent hover:text-white">
+              <Link
+                to="/signup"
+                className="btn bg-base-100 hover:bg-accent hover:text-white"
+              >
                 Sign Up
               </Link>
-              <Link to="/signin" className="btn bg-base-100 hover:bg-accent hover:text-white mr-2">
+              <Link
+                to="/signin"
+                className="btn bg-base-100 hover:bg-accent hover:text-white mr-2"
+              >
                 Sign In
               </Link>
             </>
